@@ -9,7 +9,10 @@ body {
   /* background: linear-gradient(to right, blue, green); */
 }
 .alert {
-  border: 2px solid #1433d6;
+  border-radius: 0 !important;
+    /* padding: 16px !important; */
+    background-color: #1433D6 !important;
+    border: 2px solid #1433D6;
   /* border: none; */
   display: flex;
   justify-content: space-between;
@@ -17,7 +20,6 @@ body {
   padding: 16px;
   height: 10px;
   width: 100%;
-  background-color: #1433d6;
   z-index: 50;
   position: fixed;
 }
@@ -35,6 +37,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   font-style: normal;
+  padding-top: 0;
 }
 .menu-list {
   display: flex;
@@ -43,10 +46,14 @@ body {
   font-size: 15px;
   font-weight: 400;
   font-style: normal;
+  padding-top: 0;
+
 }
 .menu-list li a {
   text-decoration: none;
   color: #eff2fb;
+  padding-top: 0;
+  
 }
 .menu-list li a:hover {
   text-decoration: underline;
@@ -1429,38 +1436,42 @@ h5 {
 }
 .project-sect{
     background-image: url(../images/imgi_56_section-bg.f20c67d0.png);
-     background-size: cover ;
+    background-size: cover ;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 12px;      
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .project-div {
   padding-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
 }
 .project-div1 {
-    width: 30%;
-    margin: auto;
+    width: 40%;
+    border: 2px solid black;
 }
 .project-para1 {
     font-weight: 700;
     font-size: 30px;
-    line-height: 32px;
+    /* line-height: 32px; */
     color: #000c2a;
-    padding: 10px;
+    /* padding: 10px; */
+    margin-left: 10px;
 }
 
 .project-para2 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 24px;
+    /* width: 60%; */
+    /* line-height: 24px; */
     color: #4d5b7c;
-    padding: 10px;
+    /* padding: 10px; */
+    margin-left: 10px;
 }
 .pro-a {
     color: #000c2a;
@@ -1476,24 +1487,24 @@ h5 {
 }
 .project-cards {
   display: flex;
-  flex-wrap: wrap; /* allows cards to wrap on smaller screens */
-  gap: 2em;        /* space between cards */
-  justify-content: center; /* center the children horizontally */
-  align-items: stretch;    /* align children vertically */
+  flex-wrap: wrap; 
+  gap: 2em;        
+  justify-content: center; 
+  align-items: stretch; 
 }
 .project-div2 {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    /* border: 2px solid black; */
-    width: 50%;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border: 2px solid black;
+  width: 45%;
+  gap: 20px;
 }
 .pro-head{
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 26px;
-    color: #000c2a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000c2a;
 }
 .pro-head1 {
   font-size: 16px;
@@ -1544,6 +1555,26 @@ h5 {
 .pro-head-2 {
   margin-bottom: 10px;
   border: 2px solid black;
+}
+@media (max-width: 768px) {
+  .project-div {
+    flex-direction: column;
+  }
+  .project-div1 {
+    width: 100%;
+  }
+  .project-div2 {
+    width: 100%;
+    flex-direction: column;
+    /* margin-right: 600px; */
+  }
+  .project-card {
+    width: 96%;
+    border: 2px solid black;
+    margin-left: 30px;
+    margin-top: 10px;
+    padding-left: 10px;
+  }
 }
 .question {
   padding-top: 80px;
@@ -1871,12 +1902,12 @@ footer {
     align-items: center;
     gap: 0.8em;
 }
-.logo-text h5 {
+.logo-text p {
     font-size: 16px;
     font-weight: 700;
     color: #000000;
-   padding: 0;
-   padding-top: 10px;
+    padding: 0;
+    padding-top: 10px;
 }
 .foot-icon {
   /* width: 60px; */
@@ -1886,4 +1917,132 @@ footer {
 /* On hover → black */
 .foot-icon:hover {
   filter: brightness(0) saturate(100%);
+}
+.foot-div2 {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-right: 20px;
+} 
+/* FOOTER QUERY */
+@media (max-width: 768px) {
+  .first-footer {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 40px; 
+    width: 95%;
+    margin: auto;
+  }
+
+  
+  .first-footer > div {
+    padding: 14px 20px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+
+  
+  .first-footer p {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 700; /
+  }
+
+ 
+  .first-footer .footer-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    margin-top: 8px;
+    padding-left: 30px; /
+  }
+  .first-footer > div.active .footer-list {
+    max-height: 1000px;
+  }
+  .first-footer p::after {
+    content: '';
+    font-weight: 700;
+    margin-left: 12px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg); 
+    transition: transform 0.3s ease;
+  }
+  .first-footer > div.active p::after {
+    transform: rotate(-135deg);
+
+  }
+}
+@media (max-width: 768px) {
+  .second-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .foot-div1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-text {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap; 
+  }
+
+  .logo-text a {
+    white-space: nowrap;
+  }
+
+  .foot-div2 {
+    order: 2;
+    width: 100%;
+    max-width: 460px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .foot-div2 a {
+    width: 44px;
+    /* height: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .second-footer {
+    flex-direction: column;
+    gap: 15px;
+    /* text-align: center; */
+  }
+
+  .foot-div1 {
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* padding-left: 10px; */
+  }
+  .foot-div1 .logo-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    /* margin-top: 5px; */
+  }
 }
